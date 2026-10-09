@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hill Climb Racing - Pure Raster Graphics</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #1a1e24;
+}
+QWidget#centralwidget {
+    background-color: #1a1e24;
+}
+QPushButton {
+    background-color: #2b3543;
+    color: #f0f4f8;
+    border: 1px solid #4a5a70;
+    border-radius: 5px;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 13px;
+}
+QPushButton:hover {
+    background-color: #3b495c;
+    border-color: #607d9b;
+}
+QPushButton:pressed {
+    background-color: #202833;
+}
+QSpinBox {
+    background-color: #2b3543;
+    color: #f0f4f8;
+    border: 1px solid #4a5a70;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+QLabel {
+    color: #e0e6ed;
+    font-size: 13px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainVerticalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>8</number>
+    </property>
+    <property name="topMargin">
+     <number>8</number>
+    </property>
+    <property name="rightMargin">
+     <number>8</number>
+    </property>
+    <property name="bottomMargin">
+     <number>8</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="topPanel">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#topPanel {
+    background-color: #242c38;
+    border-radius: 6px;
+    border: 1px solid #364456;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="topHorizontalLayout">
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="restartBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #c93b3b; color: white; border: 1px solid #e05555;</string>
+         </property>
+         <property name="text">
+          <string>Restart (R)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="gridBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #2e7d32; color: white; border: 1px solid #43a047;</string>
+         </property>
+         <property name="text">
+          <string>Show Grid (G)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="zoomLabel">
+         <property name="text">
+          <string>Grid Cell Size:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="zoomSet">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="fullscreenBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #1976d2; color: white; border: 1px solid #42a5f5;</string>
+         </property>
+         <property name="text">
+          <string>Fullscreen (F11)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="controlsHintLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #a0b2c6; font-size: 12px; font-weight: bold;</string>
+         </property>
+         <property name="text">
+          <string>Controls: [D / -&gt;] Gas  |  [A / &lt;-] Brake  |  [Space] Pause  |  [F11] Fullscreen</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="canvas">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>640</width>
+        <height>360</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #0c1017; border: 2px solid #2a3545; border-radius: 4px;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="bottomPanel">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#bottomPanel {
+    background-color: #242c38;
+    border-radius: 6px;
+    border: 1px solid #364456;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="bottomHorizontalLayout">
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="brakeBtn">
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #d32f2f; color: white; font-size: 14px; font-weight: bold; border-radius: 6px;</string>
+         </property>
+         <property name="text">
+          <string>&lt;&lt; BRAKE / TILT [A]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="bottomSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="gameStatusLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #64b5f6; font-size: 14px; font-weight: bold;</string>
+         </property>
+         <property name="text">
+          <string>Hill Climb Racing - Pure Raster Graphics</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="bottomSpacer2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="gasBtn">
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #388e3c; color: white; font-size: 14px; font-weight: bold; border-radius: 6px;</string>
+         </property>
+         <property name="text">
+          <string>GAS / TILT &gt;&gt; [D]</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

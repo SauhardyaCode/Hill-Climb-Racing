@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\HillClimbRacing.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\HillClimbRacing.dir/objects.a @CMakeFiles\HillClimbRacing.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\HillClimbRacing.dir/objects.a -Wl,--no-whole-archive -o HillClimbRacing.exe -Wl,--out-implib,libHillClimbRacing.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\HillClimbRacing.dir\linkLibs.rsp

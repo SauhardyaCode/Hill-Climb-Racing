@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0d170770fe0c4f4bb195.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HillClimbRacing",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HillClimbRacing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HillClimbRacing-Debug-7ee0be64af3c3b845253.json",
+					"name" : "HillClimbRacing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HillClimbRacing_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HillClimbRacing_autogen-Debug-7e0f6de6320ca761b32c.json",
+					"name" : "HillClimbRacing_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HillClimbRacing_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HillClimbRacing_autogen_timestamp_deps-Debug-00c623cc33d709f8f95b.json",
+					"name" : "HillClimbRacing_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/WIN11/Documents/Hill Climb Racing/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug",
+		"source" : "C:/Users/WIN11/Documents/Hill Climb Racing"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

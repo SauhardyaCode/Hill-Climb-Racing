@@ -1,0 +1,9 @@
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/HillClimbRacing.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/edit_cache.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/rebuild_cache.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/list_install_components.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/install.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/install/local.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/install/strip.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/HillClimbRacing_autogen_timestamp_deps.dir
+C:/Users/WIN11/Documents/Hill Climb Racing/build/CMakeFiles/HillClimbRacing_autogen.dir
